@@ -51,7 +51,7 @@ def play_sound(): # Play sound function.
 if __name__ == '__main__':
     root = Tk()
     root.title('Detector de Puertos')
-    root.iconbitma(icon_path)
+    root.iconbitmap(icon_path)
     root.geometry('700x280')
     ports = find_available_serial_ports() # Encuentra los puertos disponibles.
     
