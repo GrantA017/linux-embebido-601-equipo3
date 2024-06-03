@@ -1,6 +1,14 @@
 import time
 import serial
 
+BAUDRATES = [
+    9600,
+    19200,
+    38400,
+    57600,
+    115200,
+]
+
 class SensorSerial:
 
     def _init_(self, serial_port:str,
