@@ -13,10 +13,10 @@ from sensor_serial import SensorSerial
 from utils import find_available_serial_ports
 
 # Assets
-back = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/Ardu/Assets/Beige.png"
-texture = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/Ardu/Assets/Wood.png"
-button_sound = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/Ardu/Assets/CHIME_FX_popper_01.wav"
-icon_path = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/Ardu/Assets/icon.ico"
+back = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/proyecto_final/Assets/Emerald.jpg"
+texture = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/proyecto_final/Assets/Beige.png"
+button_sound = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/proyecto_final/Assets/CHIME_FX_popper_01.wav"
+icon_path = "C:/Users/Grant/OneDrive/School & Courses/[S10] Diseño de Sistemas en Chip/Módulo 4 - Linux Embebido - Pedro/linux-embebido-601-equipo3/proyecto_final/Assets/icon.ico"
     
 # ========== Funciones Importantes de los Elementos ==========
     
@@ -79,9 +79,9 @@ if __name__ == '__main__':
         
     # Create buttons and comboboxes with images and text.
     serial_devices_combobox = Combobox(root, values=ports)
-    refresh_serial_devices_button = Button(root, image=refresh_serial_devices_button_photo, text="Refresh Available Serial Devices", compound="center", fg="white", command=lambda: [refresh_serial_devices(), play_sound()], borderwidth=0)
+    refresh_serial_devices_button = Button(root, image=refresh_serial_devices_button_photo, text="Refresh Available Serial Devices", compound="center", fg="black", command=lambda: [refresh_serial_devices(), play_sound()], borderwidth=0)
     baudrate_combobox = Combobox(root,  values=['Baudrate'] + BAUDRATES)
-    connect_serial_button = Button(root, image=connect_serial_button_photo, text="Connect Serial", compound="center", fg="white", command=lambda: [play_sound(), create_sensor_serial()], borderwidth=0)
+    connect_serial_button = Button(root, image=connect_serial_button_photo, text="Connect Serial", compound="center", fg="black", command=lambda: [play_sound(), create_sensor_serial()], borderwidth=0)
     
     create_widget(serial_devices_combobox, 0, 0)
     create_widget(refresh_serial_devices_button, 0, 1.5)
